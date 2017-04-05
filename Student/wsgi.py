@@ -1,15 +1,10 @@
-"""
-WSGI config for Student project.
-
-It exposes the WSGI callable as a module-level variable named ``application``.
-
-For more information on this file, see
-https://docs.djangoproject.com/en/1.10/howto/deployment/wsgi/
-"""
+## Exposes WSGI Module
+##
 
 import os
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "Student.settings")
 
+##Creating self contained unit that can be deployed anywhere using whitenoise
 from django.core.wsgi import get_wsgi_application
 from whitenoise.django import DjangoWhiteNoise
 

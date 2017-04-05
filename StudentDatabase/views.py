@@ -8,6 +8,7 @@ from rest_framework import status
 from .models import Student
 from .serializers import StudentsSerializer
 
+# Creating a view to the API
 class StudentList(APIView):
     def get(self,request):
         student = Student.objects.all()
